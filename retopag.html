@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/retoppt.js"></script>
     <title>Scissor Paper Rock</title>
 </head>
 
@@ -18,7 +19,7 @@
                 <img src="img/scissors.png" alt="">
 
                 <div class="Score-Container">
-                    <p>1</p>
+                    <p id="pcpuntaje">1</p>
                 </div>
             </div>
             <div class="Main-table">
@@ -27,16 +28,27 @@
                 </div>
             </div>
             <div class="image-container">
-                <img src="img/Rock.png" alt="">
-                <img src="img/paper.png" alt="">
-                <img src="img/scissors.png" alt="">
+                <img id="userRock" src="img/Rock.png" alt="">
+                <img id="userPaper" src="img/paper.png" alt="">
+                <img id="userScissor" src="img/scissors.png" alt="">
 
                 <div class="Score-Container">
-                    <p>1</p>
+                    <p id="p1puntaje">1</p>
                 </div>
             </div>
         </div>
     </section>
 </body>
+<script >
+ document.getElementById("userRock").addEventListener("click", jugarPiedra);    
+ document.getElementById("userPaper").addEventListener("click", jugarPapel);    
+ document.getElementById("userScissor").addEventListener("click", jugarTijera);  
+ document.getElementById("userRock").addEventListener("mouseover", myFunction);
+ function myFunction(){
+    "Main-table-container-images"
+ }
 
+ imprimirJugadorPuntaje();
+ imprimirPcPuntaje();
+</script>    
 </html>
