@@ -19,3 +19,16 @@ var resultado = function(user, pc) {
     } else if (user === pc)
         console.log("Ha sido empate");
 };
+
+function jugadaDelComputador() {
+    var result           = '';
+    var characters       = 'xpt';
+    var charactersLength = characters.length;
+ result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   if (result=="x"){return "piedra"}
+   if (result=="p"){return "papel"}
+   if (result=="t"){return "tijera"}
+    
+ }
+ 
+ document.getElementById("demo").innerHTML=jugadaDelComputador();
