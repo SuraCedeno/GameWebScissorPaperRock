@@ -4,8 +4,13 @@ j<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="Css/main.css">
+=======
+    <link rel="stylesheet" href="css/main.css">
+>>>>>>> 61348fc32648fb34ef4b19ad40f41d6ef0c4355a
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/retoppt.js"></script>
     <title>Scissor Paper Rock</title>
 </head>
 
@@ -18,25 +23,39 @@ j<!DOCTYPE html>
                 <img src="img/scissors.png" alt="">
 
                 <div class="Score-Container">
-                    <p>1</p>
+                    <p id="pcpuntaje">1</p>
                 </div>
             </div>
             <div class="Main-table">
                 <div class="Main-table-container">
                     <img class="Main-table-container-images" src="img/Rock.png" alt="">
                 </div>
+                <div class="Main-table-container">
+                    <img class="Main-table-container-images" src="img/paper.png" alt="">
+                </div>
             </div>
             <div class="image-container">
-                <img class="rock-image" src="img/Rock.png" alt="">
-                <img class="paper-image" src="img/paper.png" alt="">
-                <img class="scissor-image" src="img/scissors.png" alt="">
+                <img id="userRock" src="img/Rock.png" alt="">
+                <img id="userPaper" src="img/paper.png" alt="">
+                <img id="userScissor" src="img/scissors.png" alt="">
 
                 <div class="Score-Container">
-                    <p>1</p>
+                    <p id="p1puntaje">1</p>
                 </div>
             </div>
         </div>
     </section>
 </body>
+<script >
+ document.getElementById("userRock").addEventListener("click", jugarPiedra);    
+ document.getElementById("userPaper").addEventListener("click", jugarPapel);    
+ document.getElementById("userScissor").addEventListener("click", jugarTijera);  
+ document.getElementById("userRock").addEventListener("mouseover", myFunction);
+ function myFunction(){
+    "Main-table-container-images"
+ }
 
+ imprimirJugadorPuntaje();
+ imprimirPcPuntaje();
+</script>    
 </html>
