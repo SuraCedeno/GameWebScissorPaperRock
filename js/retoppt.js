@@ -17,9 +17,10 @@ function jugarTijera(){
 function jugar(){
     var pcJugada=jugadaDelComputador() 
     resultado=comparar(tijera,pcJugada);
+    imprimirResultados()
     console.log(resultado)
     alert(resultado)
-    imprimirResultados()
+   
 }
 
  function comparar(user, pc) {
