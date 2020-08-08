@@ -1,22 +1,36 @@
-var piedra = "x";
+var piedra = "x";// valor de piedra
 var papel = "p";
 var tijera = "t";
 var p1Puntaje=0;
 var pcPuntaje=0;
 var pcJugada="";
+//
 function jugarPiedra(){
+    document.getElementById('j1').src="img/Rock.png"
     jugar(piedra)
 }
 function jugarPapel(){
-    jugar(piedra)
+    document.getElementById('j1').src="img/paper.png"
+    jugar(papel)
 }
 function jugarTijera(){
+    document.getElementById('j1').src="img/scissors.png"
     jugar(tijera)
 }
 
-function jugar(){
+function jugar(jugada){
     var pcJugada=jugadaDelComputador() 
-    resultado=comparar(tijera,pcJugada);
+    if ( pcJugada==piedra){
+        document.getElementById('pc').src="img/Rock.png"
+    }
+    if ( pcJugada==papel){
+        document.getElementById('pc').src="img/paper.png"
+    }
+    if ( pcJugada==tijera){
+        document.getElementById('pc').src="img/scissors.png"
+    }
+
+    resultado=comparar(jugada,pcJugada);
     imprimirResultados()
     console.log(resultado)
     alert(resultado)
@@ -24,6 +38,7 @@ function jugar(){
 }
 
  function comparar(user, pc) {
+    console.log (user,pc)
     if (user != pc) {
 
         if (user === papel && pc === piedra) {
